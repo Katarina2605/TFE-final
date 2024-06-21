@@ -81,8 +81,8 @@
         <h1 class="text-4xl font-bold text-white">Respons'adopt</h1>
         <p class="text-lg text-gray-200 mt-4">Notre site aura pour but de vous aider à connaître les législatives concernant l'adoption d'un animal de façon légale et responsable..<br> Nous vous aiderons également à connaître les SPA les plus proches de chez vous.</p>
         <p class="mt-6">
-            <a class="btn bg-blue-500 hover:bg-blue-700 text-white hover:text-white px-6 py-3 rounded-md inline-block transition-transform transform hover:scale-105" role="button" href="contact">
-                Nous contacter
+            <a class="btn bg-blue-500 hover:bg-blue-700 text-white hover:text-white px-6 py-3 rounded-md inline-block transition-transform transform hover:scale-105" role="button" href="newsletter">
+                S'inscrire à la Newsletter
             </a>
         </p>
     </div>
@@ -178,10 +178,10 @@
             <div class="w-full md:w-1/3 px-4">
                 <h3 class="text-lg font-semibold">Contact</h3>
                 <div class="mt-4">
-                    <p>010 22 20 26<br>
+                    <p>0489 99 03 27<br>
                         <a href="mailto:katarina.gerlage@ifosup.wavre.be">katarina.gerlage@ifosup.wavre.be</a><br>
                         <br>
-                        Rue de la limite 6, 1300 Wavre.
+                        Viaductstraat 71, 3300 Tienen.
                     </p>
                 </div>
             </div>

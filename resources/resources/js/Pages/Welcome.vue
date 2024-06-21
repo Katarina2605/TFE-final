@@ -55,25 +55,6 @@ defineProps({
                         <li><a href="refuges" class="hover:underline">Refuges</a></li>
                         <li><a href="legislations" class="hover:underline">Législations</a></li>
                         <li><a href="contact" class="hover:underline">Contact</a></li>
-
-                        <!-- Utilisation de la directive v-if pour conditionner l'affichage -->
-                        <template v-if="isLoggedIn">
-                            <li>
-                                <a class="btn bg-blue-500 hover:bg-blue-700 text-white px-3 py-2 rounded-md transition-colors" href="dashboard">
-                                    Dashboard
-                                </a>
-                            </li>
-                        </template>
-
-                        <template v-else>
-                            <li>
-                                <a class="btn bg-blue-500 hover:bg-blue-700 text-white px-3 py-2 rounded-md transition-colors" href="register">
-                                    S'inscrire
-                                </a>
-                            </li>
-                        </template>
-
-
                     </ul>
                 </div>
             </div>

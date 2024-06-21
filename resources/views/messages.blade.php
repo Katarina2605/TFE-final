@@ -101,10 +101,10 @@
             <div class="w-full md:w-1/3 px-4">
                 <h3 class="text-lg font-semibold">Contact</h3>
                 <div class="mt-4">
-                    <p>010 22 20 26<br>
+                    <p>0489 99 03 27<br>
                         <a href="mailto:katarina.gerlage@ifosup.wavre.be">katarina.gerlage@ifosup.wavre.be</a><br>
                         <br>
-                        Rue de la limite 6, 1300 Wavre.
+                        Viaductstraat 71, 3300 Tienen.
                     </p>
                 </div>
             </div>
