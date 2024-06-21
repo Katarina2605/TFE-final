@@ -125,7 +125,7 @@
                     <p>04 89 99 03 27</p>
 
                     <h2 class="text-xl font-bold mt-4">Adresse mail</h2>
-                    <p>katarina.gerlage@ifosup.wavre.be</p>
+                    <p> <a href="mailto:katarina.gerlage@ifosup.wavre.be">katarina.gerlage@ifosup.wavre.be</a></p>
 
                     <h2 class="text-xl font-bold mt-4">Responsable de publication</h2>
                     <p>Katarina Gerlage.
@@ -150,6 +150,11 @@
 
                     <h2 class="text-xl font-bold mt-4">Date de dernière mise à jour.</h2>
                     <p>Juin 2024.</p>
+
+                    <h2 class="text-xl font-bold mt-4">Se désinscrire de la newsletter.</h2>
+                    <p>Vous pouvez vous désinscrire via <a href="https://katarina-gerlage.us13.list-manage.com/unsubscribe?u=11be1adeb061bb434cb0d2389&id=d906b81835&t=b&e=[UNIQID]&c=cc04630ca0" class="text-blue-500 hover:underline">ce lien</a>
+                    </p>
+                    <p>Ou vous pouvez envoyer un mail à l'adresse :  <a href="mailto:katarina.gerlage@ifosup.wavre.be">katarina.gerlage@ifosup.wavre.be</a></p>
                 </div>
 
             </article>
