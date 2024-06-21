@@ -25,10 +25,19 @@
           crossorigin=""></script>
 
   <style>
-    #map {
-      height: 400px;
-      width: 100%;
-    }
+
+      /* Améliorer l'affichage du menu sur mobile */
+      @media (max-width: 768px) {
+          #mobile-menu {
+              display: none;
+          }
+          #mobile-menu.show {
+              display: block;
+          }
+      }
+
+      #map { height: 400px; position: relative; z-index: 1; }
+      .navbar { position: fixed; top: 0; width: 100%; z-index: 10; }
   </style>
 </head>
 
@@ -101,33 +110,32 @@
 
 
     <div class="bg-gray-100">
-    <div class="container mx-auto my-4 flex flex-wrap -mx-4">
-        <!-- Sidebar -->
-        <aside class="w-full md:w-1/3 px-4">
-            <div class="mb-8 p-4 bg-white rounded-lg shadow-md">
-                <h4 class="font-bold mb-2">Favoriser les adoptions</h4>
-                <p>Chaque année, beaucoup d'animaux subissent un abandon... Notre but ? Vous aider à trouver le refuge le plus proche de chez vous afin de vous donner toutes les cartes en main pour rendre un animal heureux.</p>
-            </div>
-            <div class="mb-8 p-4 bg-white rounded-lg shadow-md">
-                <h4 class="font-bold mb-2">Les refuges regorgent d'animaux</h4>
-                <img src="https://images2.imgbox.com/8b/72/icDAv9sC_o.jpg" alt="" class="w-full h-48 object-cover rounded-lg">
-            </div>
-            <div class="mb-8 p-4 bg-white rounded-lg shadow-md">
-                <h4 class="font-bold mb-2">Un acte d'amour peut changer une vie à jamais.</h4>
-                <img src="https://images2.imgbox.com/3f/eb/yKRA4xH3_o.jpg" alt="" class="w-full h-48 object-cover rounded-lg mb-2">
-                <p>Le saviez-vous ? Adopter un animal, c'est en aider deux : le premier qui sera votre compagnon pour la vie, et le second sera celui qui pourra avoir une place dans un refuge grâce à la place libérée.</p>
-            </div>
-        </aside>
-        <!-- /Sidebar -->
+        <div class="container mx-auto my-4 flex flex-wrap">
+            <!-- Sidebar -->
+            <aside class="w-full md:w-1/3 px-4 mb-4 md:mb-0">
+                <div class="mb-8 p-4 bg-white rounded-lg shadow-md">
+                    <h4 class="font-bold mb-2">Favoriser les adoptions</h4>
+                    <p>Chaque année, beaucoup d'animaux subissent un abandon... Notre but ? Vous aider à trouver le refuge le plus proche de chez vous afin de vous donner toutes les cartes en main pour rendre un animal heureux.</p>
+                </div>
+                <div class="mb-8 p-4 bg-white rounded-lg shadow-md">
+                    <h4 class="font-bold mb-2">Les refuges regorgent d'animaux</h4>
+                    <img src="https://images2.imgbox.com/8b/72/icDAv9sC_o.jpg" alt="" class="w-full h-48 object-cover rounded-lg">
+                </div>
+                <div class="mb-8 p-4 bg-white rounded-lg shadow-md">
+                    <h4 class="font-bold mb-2">Un acte d'amour peut changer une vie à jamais.</h4>
+                    <img src="https://images2.imgbox.com/3f/eb/yKRA4xH3_o.jpg" alt="" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <p>Le saviez-vous ? Adopter un animal, c'est en aider deux : le premier qui sera votre compagnon pour la vie, et le second sera celui qui pourra avoir une place dans un refuge grâce à la place libérée.</p>
+                </div>
+            </aside>
+            <!-- /Sidebar -->
 
-        <!-- Article main content -->
-        <div class="w-full md:w-2/3 px-4 rounded-lg shadow-md" style="background-color: white; padding: 20px;">
-            <article class="w-full">
-                <header class="mb-4">
+            <!-- Article main content -->
+            <div class="w-full md:w-2/3 px-4">
+                <article class="bg-white rounded-lg shadow-md p-6">
+                    <header class="mb-4">
                     <h1 class="text-3xl font-bold">Refuges situés en Wallonie</h1>
                 </header>
-
-                <div id="map" class="mb-4"></div>
+                <div id="map" class="mb-4" style="height: 500px;"></div> <!-- Réduire la hauteur de la carte -->
 
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
@@ -174,14 +182,15 @@
                         });
                     });
                 </script>
-
                 <p>Découvrez les refuges dédiés au bien-être des animaux dans le Brabant Wallon grâce à cette carte interactive. Ces sanctuaires offrent un refuge sûr pour une variété d'animaux, leur procurant soins, sécurité et amour.</p><br>
                 <p>Chaque point sur la carte représente un lieu où des bénévoles dévoués et des professionnels travaillent ensemble pour offrir une seconde chance à des animaux maltraités, abandonnés ou en difficulté. </p><br>
+                <p>Pour accéder à leurs informations ? Rien de plus simple, il vous suffira de cliquer sur les divers points sur la carte et vous accéderez à toutes les informations essentielles.</p><br>
                 <p>Explorez ces refuges où l'espoir renaît pour de nombreuses vies, et où vous pouvez contribuer à soutenir cette noble cause en offrant votre temps, votre aide ou simplement en partageant leur histoire.</p><br>
                 <p>Ensemble, nous pouvons faire une différence pour nos amis à fourrure et à plumes.</p>
             </article>
         </div>
         <!-- /Article main content -->
+
     </div>
     </div>
 </div>
@@ -271,23 +280,3 @@
 </footer>
 
 </html>
-
-<style>
-    #map {
-        height: 400px;
-        width: 100%;
-    }
-
-    /* Améliorer l'affichage du menu sur mobile */
-    @media (max-width: 768px) {
-        #mobile-menu {
-            display: none;
-        }
-        #mobile-menu.show {
-            display: block;
-        }
-    }
-
-    #map { height: 400px; position: relative; z-index: 1; }
-    .navbar { position: fixed; top: 0; width: 100%; z-index: 10; }
-</style>
