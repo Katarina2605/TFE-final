@@ -95,7 +95,7 @@
                         <div class="response" id="mce-success-response" style="display: none;"></div>
                     </div>
                     <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
                         <input type="text" name="b_11be1adeb061bb434cb0d2389_d906b81835" tabindex="-1" value="">
                     </div>
                     <div class="optionalParent">
@@ -140,10 +140,10 @@
             <div class="w-full md:w-1/3 px-4">
                 <h3 class="text-lg font-semibold">Contact</h3>
                 <div class="mt-4">
-                    <p>010 22 20 26<br>
+                    <p>04 89 99 03 27<br>
                         <a href="mailto:katarina.gerlage@ifosup.wavre.be">katarina.gerlage@ifosup.wavre.be</a><br>
                         <br>
-                        Rue de la limite 6, 1300 Wavre.
+                        Viaductstraat 71, 3300 Tienen.
                     </p>
                 </div>
             </div>
