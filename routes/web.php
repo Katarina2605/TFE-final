@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\NewsletterController;
 
 
 Route::get('/', function () {
@@ -78,3 +79,8 @@ Route::delete('/faqs/{faq}', [FAQController::class, 'destroy'])->name('faqs.dest
 
 Route::get('/', [FAQController::class, 'indexForIndexView'])->name('index');
 Route::get('/api/faqs', [FAQController::class, 'apiIndex'])->name('faqs.apiIndex');
+
+/*Newsletter*/
+Route::get('/newsletter', function () {
+    return view('newsletter');
+});
