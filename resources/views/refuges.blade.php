@@ -135,11 +135,11 @@
 <!-- container -->
 <div class="container mx-auto px-4 py-8">
 
-    <nav class="bg-white py-3 rounded mb-6">
-        <ol class="flex space-x-4">
-            <li><a href="/" class="text-gray-600">Accueil</a></li>
-            <li>/</li>
-            <li><a href="/refuges" class="text-blue-500">Refuges</a></li>
+    <nav class="bg-white py-3 rounded mb-4 shadow">
+        <ol class="list-reset flex">
+            <li class="ml-2"><a href="/" class="text-blue-500">Accueil</a></li>
+            <li class="text-gray-500 mx-2">/</li>
+            <li class="ml-2 text-gray-500">Legislations</li>
         </ol>
     </nav>
 
