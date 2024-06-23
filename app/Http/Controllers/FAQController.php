@@ -61,4 +61,14 @@ class FAQController extends Controller
         $faqs = FAQ::all();
         return view('index', compact('faqs'));
     }
+
+    public function showFaqPage()
+    {
+        // Vérifier si l'utilisateur est connecté
+        if (auth()->check()) {
+            return view('faqs.show');
+        } else {
+            abort(403, 'Unauthorized action.');
+        }
+    }
 }
