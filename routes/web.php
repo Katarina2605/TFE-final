@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\RefugeRequestController;
 
 
 Route::get('/', function () {
@@ -97,3 +98,14 @@ Route::middleware(['auth'])->group(function () {
 
 // Route sans middleware auth (accessible publiquement)
 Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts.show');
+
+/* Formulaire pour rajouter son refuge */
+
+// Route pour afficher le formulaire de demande de refuge
+Route::get('/formulaire-refuges', [RefugeRequestController::class, 'showFormulaire'])->name('formulaire-refuges');
+
+// Route pour soumettre le formulaire de demande de refuge
+Route::post('/formulaire-refuges', [RefugeRequestController::class, 'store'])->name('refuge_requests.store');
+
+// Route pour afficher la vue d'ajout de refuges
+Route::middleware('auth')->get('/ajout-refuges', [RefugeRequestController::class, 'showAjout'])->name('ajout-refuges');

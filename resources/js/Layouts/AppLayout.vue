@@ -59,6 +59,11 @@ const logout = () => {
                                 <NavLink :href="route('faqs.index')" target="_blank" :active="route().current('faqs.index')">
                                     FAQ
                                 </NavLink>
+
+                                <NavLink :href="route('ajout-refuges')" target="_blank" :active="route().current('ajout-refuges')">
+                                    Ajout de refuges
+                                </NavLink>
+
                             </div>
                         </div>
 
