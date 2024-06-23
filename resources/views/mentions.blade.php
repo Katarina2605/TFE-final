@@ -70,7 +70,8 @@
     </div>
 </div>
 
-<header id="head" class="bg-gray-200 h-32"></header>
+
+<header id="head" class="bg-gray-200 h-20 mb-8"></header>
 
 <!-- container -->
 <div class="container mx-auto px-4 mt-20">

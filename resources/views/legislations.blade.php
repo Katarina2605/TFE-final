@@ -70,10 +70,10 @@
     </div>
 </div>
 
-<header id="head" class="bg-gray-200 h-32 mt-16"></header>
+<header id="head" class="bg-gray-200 h-20 mb-8"></header>
 
 <!-- container -->
-<div class="container mx-auto px-4 mt-20">
+<div class="container mx-auto px-4 mt-10">
 
     <nav class="bg-white py-3 rounded mb-4 shadow">
         <ol class="list-reset flex">

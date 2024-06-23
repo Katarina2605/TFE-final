@@ -31,6 +31,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+/* Créations des routes : URL*/
 Route::get('/refuges', function () {
     return view('refuges');
 });

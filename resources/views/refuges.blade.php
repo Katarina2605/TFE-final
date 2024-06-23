@@ -1,110 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
 
-  <title>Refuges du Brabant Wallon - Respons'adopt</title>
+    <title>Refuges du Brabant Wallon - Respons'adopt</title>
 
-  <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  <!-- CSS LEAFLET -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-        crossorigin=""/>
+    <!-- CSS LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+          crossorigin=""/>
 
-  <!-- JS LEAFLET -->
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-          integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-          crossorigin=""></script>
+    <!-- JS LEAFLET -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""></script>
 
-  <style>
+    <style>
+        /* Améliorer l'affichage du menu sur mobile */
+        @media (max-width: 768px) {
+            #mobile-menu {
+                display: none;
+            }
+            #mobile-menu.show {
+                display: block;
+            }
+        }
 
-      /* Améliorer l'affichage du menu sur mobile */
-      @media (max-width: 768px) {
-          #mobile-menu {
-              display: none;
-          }
-          #mobile-menu.show {
-              display: block;
-          }
-      }
-
-      #map { height: 400px; position: relative; z-index: 1; }
-      .navbar { position: fixed; top: 0; width: 100%; z-index: 10; }
-  </style>
+        #map { height: 400px; position: relative; z-index: 1; }
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 10; }
+    </style>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
 <!-- Fixed navbar -->
 <div class="fixed top-0 w-full bg-gray-800 text-white shadow-lg z-50">
-  <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between py-3">
-      <div class="flex items-center">
-          <a class="ml-4" href="/">
-              <img src="https://images2.imgbox.com/67/c5/KobvRJUU_o.png" alt="Respons'adopt logo" class="h-12">
-          </a>
-      </div>
-        <div class="md:flex md:items-center">
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="/" class="hover:underline text-white">Accueil</a></li>
-                <li><a href="/refuges" class="hover:underline text-white">Refuges</a></li>
-                <li><a href="/legislations" class="hover:underline text-white">Législations</a></li>
-                <li><a href="/contact" class="hover:underline text-white">Contact</a></li>
-            </ul>
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-3">
+            <div class="flex items-center">
+                <a class="ml-4" href="/">
+                    <img src="https://images2.imgbox.com/67/c5/KobvRJUU_o.png" alt="Respons'adopt logo" class="h-12">
+                </a>
+            </div>
+            <div class="md:flex md:items-center">
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="/" class="hover:underline text-white">Accueil</a></li>
+                    <li><a href="/refuges" class="hover:underline text-white">Refuges</a></li>
+                    <li><a href="/legislations" class="hover:underline text-white">Législations</a></li>
+                    <li><a href="/contact" class="hover:underline text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Menu hamburger pour les petites tailles d'écran -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu déroulant pour les petites tailles d'écran -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="flex flex-col mt-2 space-y-2">
+                    <li><a href="/" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Accueil</a></li>
+                    <li><a href="/refuges" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Refuges</a></li>
+                    <li><a href="/legislations" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Législations</a></li>
+                    <li><a href="/contact" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Contact</a></li>
+                </ul>
+            </div>
+
         </div>
-
-        <!-- Menu hamburger pour les petites tailles d'écran -->
-        <div class="md:hidden flex items-center">
-            <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Menu déroulant pour les petites tailles d'écran -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <ul class="flex flex-col mt-2 space-y-2">
-                <li><a href="/" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Accueil</a></li>
-                <li><a href="/refuges" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Refuges</a></li>
-                <li><a href="/legislations" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Législations</a></li>
-                <li><a href="/contact" class="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-100">Contact</a></li>
-            </ul>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-
-                mobileMenuButton.addEventListener('click', function () {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            });
-        </script>
-
     </div>
-  </div>
 </div>
+<!-- FIN DE LA BARRE DE NAVIGATION -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialisation de la carte
+        var map = L.map('map').setView([50.71890273096661, 4.608002540534588], 10);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Icone personnalisée pour les marqueurs
+        var pawIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/2229/2229675.png',
+            iconSize: [30, 30],
+            iconAnchor: [22, -15],
+            popupAnchor: [-3, -76]
+        });
+
+        // Données des marqueurs
+        var refuges = [
+            { coords: [50.625672934911115, 4.765615284390158], name: "Sans collier", address: "Chau. de Charleroi 68, 1360 Perwez, 081354090" },
+            { coords: [50.703189354253276, 4.9966058095239125], name: "SOS Petits Museaux", address: "Rue Cyrille Dewael 26, 1350 Orp-Jauche" },
+            { coords: [50.747130738605556, 4.811446942327357], name: "Animal Behaviour Center", address: "Rue de la Maison du Bois 108, 1370 Jodoigne, 0497481557" },
+            { coords: [50.596290683143145, 4.342780696027994], name: "Un toit pour eux", address: "Av. du Centenaire 80, 1400 Nivelles, 0493773527" },
+            { coords: [50.67103436936168, 4.349777826719766], name: "Everyone Matters", address: "Rue les Tiennes 51, 1421 Braine L'alleud, 0465881689" },
+            { coords: [50.67103436936168, 4.349777826719766], name: "Animal Sans Logis", address: "Enclos Tesnière 1, 4122 Neupré, 043714321" },
+            { coords: [50.65539326626177, 5.269532237090876], name: "Animal Sans Toi...t", address: "Rue de Huy 188, 4317 Faimes, 019630036" },
+            { coords: [50.65539326626177, 5.269532237090876], name: "La croix bleue de Belgique", address: "Rue du Charbonnage 1, 5150 Floreffe, 081440660" },
+            { coords: [50.65496541004919, 4.163812209942694], name: "Ligue Nationale pour la Protection du Furet", address: "1430, Chau. de Mons 26, 1430 Rebecq, 067336767" },
+            { coords: [50.673550754415146, 4.617010255800462], name: "Chiens en liberté", address: "1430, Chau. de Mons 26, 1430 Rebecq, 067336767" }
+        ];
+
+        // Ajout des marqueurs sur la carte
+        refuges.forEach(refuge => {
+            var marker = L.marker(refuge.coords, { icon: pawIcon }).addTo(map);
+            marker.bindPopup(`<b>${refuge.name}</b><br>${refuge.address}`);
+        });
+    });
+</script>
+
 <!-- /.navbar -->
 
-<header id="head" class="bg-gray-200 h-32 mt-12"></header>
+<header id="head" class="bg-gray-200 h-20 mb-8"></header>
 
 <!-- container -->
 <div class="container mx-auto px-4 py-8">
 
-    <nav class="bg-white py-3 rounded mb-4 shadow">
-        <ol class="list-reset flex">
-            <li class="ml-2"><a href="/" class="text-blue-500">Accueil</a></li>
-            <li class="text-gray-500 mx-2">/</li>
-            <li class="ml-2 text-gray-500">Refuges</li>
+    <nav class="bg-white py-3 rounded mb-6">
+        <ol class="flex space-x-4">
+            <li><a href="/" class="text-gray-600">Accueil</a></li>
+            <li>/</li>
+            <li><a href="/refuges" class="text-blue-500">Refuges</a></li>
         </ol>
     </nav>
 
@@ -135,7 +170,7 @@
                     <header class="mb-4">
                     <h1 class="text-3xl font-bold">Refuges situés en Wallonie</h1>
                 </header>
-                <div id="map" class="mb-4" style="height: 500px;"></div> <!-- Réduire la hauteur de la carte -->
+                <div id="map" class="mb-4" style="height: 400px;"></div> <!-- Réduire la hauteur de la carte -->
 
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
