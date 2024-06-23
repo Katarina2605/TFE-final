@@ -116,8 +116,20 @@
             { coords: [50.67103436936168, 4.349777826719766], name: "Animal Sans Logis", address: "Enclos Tesnière 1, 4122 Neupré, 043714321" },
             { coords: [50.65539326626177, 5.269532237090876], name: "Animal Sans Toi...t", address: "Rue de Huy 188, 4317 Faimes, 019630036" },
             { coords: [50.65539326626177, 5.269532237090876], name: "La croix bleue de Belgique", address: "Rue du Charbonnage 1, 5150 Floreffe, 081440660" },
-            { coords: [50.65496541004919, 4.163812209942694], name: "Ligue Nationale pour la Protection du Furet", address: "1430, Chau. de Mons 26, 1430 Rebecq, 067336767" },
-            { coords: [50.673550754415146, 4.617010255800462], name: "Chiens en liberté", address: "1430, Chau. de Mons 26, 1430 Rebecq, 067336767" }
+            { coords: [50.65496541004919, 4.163812209942694], name: "Ligue Nationale pour la Protection du Furet", address: "Chau. de Mons 26, 1430 Rebecq, 067336767" },
+            { coords: [50.673550754415146, 4.250015119274553], name: "Help Animal", address: "Rue du Bois d'Apechau 10, 1440 Braine-le-Château, 025234416" },
+            { coords: [50.615380515980554, 3.3587517609204447], name: "S.R.P.A Veeweyde - Tournai", address: "Rue des Mottes 159, 7500 Tournai, 069225469" },
+            { coords: [50.59424295939301, 3.6131375706853044], name: "Les coussinets du coeur", address: "Rue du Foyer Leuzois 31, 7900 Leuze-en-Hainaut, 0498330556" },
+            { coords: [50.414641945674646, 4.407139943124821], name: "SPA Charleroi", address: "Rue Jules Ruhl 211, 6032 Charleroi, 071609311" },
+            { coords: [50.44832124661071, 4.3865405794048], name: "Caro loves cats", address: "Rue de la Pairelle 71, 6044 Charleroi, 0496621010" },
+            { coords: [50.60403711318754, 3.349479082791139], name: "Félin pour l'autre", address: "Chau. de Lille 454, 7501 Tournai, 0471124597" },
+            { coords: [50.291943547835785, 4.152922109929496], name: "Natur'horses ASBL", address: "Rue de Bersillies 16, 6560 Erquelinnes, 0495127604" },
+            { coords: [49.659226482027236, 5.853688769007779], name: "SRPA ARLON", address: "Rte de Luxembourg 351, 6700 Arlon, 063221754" },
+            { coords: [50.500587262824574, 3.5203185806797914], name: "ASBL Toutichiens", address: "Rue du Plantis 7A, 7608 Wiers" },
+            { coords: [50.78651372093633, 3.009782913232651], name: "ASBL S.P.A. de Comines-Warneton", address: "Rte de Flandre 86, 7780 Comines-Warneton, 056557102" },
+            { coords: [50.558249732234614, 3.970784006020237], name: "L'arche de Noé", address: "Rue du Bois des Dames 20, 7020 Mons, 065347797" },
+            { coords: [50.228674121534056, 5.3366500113578805], name: "Chiens Perdus Sans Collier", address: "Rue Victor Libert 36, 6900 Marche-en-Famenne, 084314623" },
+            { coords: [50.66797828137354, 4.553977555555757], name: "Humanima", address: "Clos Raymond Costard 5, 1340 Ottignies-Louvain-la-Neuve" }
         ];
 
         // Ajout des marqueurs sur la carte

@@ -78,15 +78,18 @@ Route::get('/faqs/{faq}/edit', [FAQController::class, 'edit'])->name('faqs.edit'
 Route::put('/faqs/{faq}', [FAQController::class, 'update'])->name('faqs.update');
 Route::delete('/faqs/{faq}', [FAQController::class, 'destroy'])->name('faqs.destroy');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/faqs', [FAQController::class, 'index'])->name('faqs.index');
+});
+
 Route::get('/', [FAQController::class, 'indexForIndexView'])->name('index');
 Route::get('/api/faqs', [FAQController::class, 'apiIndex'])->name('faqs.apiIndex');
-
 /*Newsletter*/
 Route::get('/newsletter', function () {
     return view('newsletter');
 });
 
-/*Ceci est un test lol*/
+/*Page contact accessible, messages accessible si connecté*/
 // Route avec middleware auth
 Route::middleware(['auth'])->group(function () {
     Route::get('/messages', [ContactController::class, 'index'])->name('messages.index');
