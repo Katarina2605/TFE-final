@@ -180,7 +180,7 @@
             <div class="w-full md:w-2/3 px-4">
                 <article class="bg-white rounded-lg shadow-md p-6">
                     <header class="mb-4">
-                    <h1 class="text-3xl font-bold">Refuges situés en Wallonie</h1>
+                    <h1 class="text-3xl font-bold">Les refuges situés en Wallonie</h1>
                 </header>
                 <div id="map" class="mb-4" style="height: 400px;"></div> <!-- Réduire la hauteur de la carte -->
 
