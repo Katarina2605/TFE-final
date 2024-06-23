@@ -85,3 +85,12 @@ Route::get('/api/faqs', [FAQController::class, 'apiIndex'])->name('faqs.apiIndex
 Route::get('/newsletter', function () {
     return view('newsletter');
 });
+
+/*Ceci est un test lol*/
+// Route avec middleware auth
+Route::middleware(['auth'])->group(function () {
+    Route::get('/messages', [ContactController::class, 'index'])->name('messages.index');
+});
+
+// Route sans middleware auth (accessible publiquement)
+Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts.show');

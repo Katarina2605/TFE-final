@@ -1,11 +1,11 @@
 <?php
 
 // app/Http/Controllers/ContactController.php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
-
 
 class ContactController extends Controller
 {
@@ -37,8 +37,14 @@ class ContactController extends Controller
 
     public function index()
     {
-        $contacts = Contact::all(); // Récupérez tous les contacts à partir du modèle Contact
+        $contacts = Contact::all();
+        return view('messages', compact('contacts'));
+    }
 
-        return view('messages', compact('contacts')); // Passez les contacts à la vue 'messages'
+    // Méthode publique, accessible sans authentification
+    public function show($id)
+    {
+        $contact = Contact::findOrFail($id);
+        return view('contact.show', compact('contact'));
     }
 }
