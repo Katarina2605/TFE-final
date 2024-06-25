@@ -162,7 +162,7 @@
     </div> <!-- /grid grid-cols-1 md:grid-cols-2 gap-6 -->
 
     <div class="bg-blue-100 py-8 px-4 mt-8 rounded-md shadow-md">
-        <h4 class="text-center text-lg">Certaines questions restent en suspens ? Vous avez besoin de réponses supplémentaires afin de vous lancer dans une adoption ? N'hésitez surtout pas à prendre contact avec nous. Si votre question concerne un animal, le refuge concerné sera apte à répondre à vos questions.</h4>
+        <h4 class="text-center text-lg">Certaines questions restent en suspend ? Vous avez besoin de réponses supplémentaires afin de vous lancer dans une adoption ? N'hésitez surtout pas à prendre contact avec nous. Si votre question concerne un animal, le refuge concerné sera apte à répondre à vos questions.</h4>
         <p class="text-center mt-4">
             <a href="contact" class="btn bg-blue-500 hover:bg-blue-700 text-white hover:text-white px-6 py-3 rounded-md transition-colors">Contactez-nous »</a>
         </p>
