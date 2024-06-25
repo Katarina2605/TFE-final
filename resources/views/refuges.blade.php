@@ -191,10 +191,11 @@
 
                         mobileMenuButton.addEventListener('click', function () {
                             mobileMenu.classList.toggle('hidden');
+                            mobileMenu.classList.toggle('show'); // Ajout de la classe show
                         });
 
                         // Initialisation de la carte
-                        var map = L.map('map').setView([50.71890273096661, 4.608002540534588], 13);
+                        var map = L.map('map').setView([50.71890273096661, 4.608002540534588], 10);
                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             maxZoom: 19,
                             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -207,6 +208,7 @@
                             iconAnchor: [22, -15],
                             popupAnchor: [-3, -76]
                         });
+
 
                         // Données des marqueurs
                         var refuges = [
