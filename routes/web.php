@@ -18,18 +18,6 @@ Route::get('/', function () {
     ]);
 });
 
-
-// Appliquer le middleware 'auth' pour les routes de registration
-/*Route::middleware('auth')->group(function () {
-    Route::get('/register', function () {
-        return Inertia::render('Auth/Register'); // Utilisation d'Inertia pour rendre la vue d'inscription
-    })->name('register');
-
-    Route::post('/register', function () {
-        // Logique de traitement de l'inscription si nécessaire
-    });
-});*/
-
 Route::middleware('auth')->group(function () {
     Route::get('/register', function () {
         return Inertia::render('Auth/Register');
@@ -78,7 +66,7 @@ Route::get('/legislations', function () {
     return view('legislations');
 });
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
 });
 
