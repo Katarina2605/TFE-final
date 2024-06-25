@@ -42,7 +42,7 @@ const logout = () => {
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
-                                  <img src="https://zupimages.net/up/24/24/bhek.png" alt="Respons'adopt logo" class="h-12">
+                                    <img src="https://images2.imgbox.com/1d/51/kCr2UV0P_o.png" alt="Respons'adopt logo" class="h-12">
                                 </Link>
                             </div>
 
@@ -61,12 +61,10 @@ const logout = () => {
                                 </NavLink>
 
                                 <NavLink :href="route('ajout-refuges')" target="_blank" :active="route().current('ajout-refuges')">
-                                    Ajout de refuges
+                                    Ajout refuges
                                 </NavLink>
-
                             </div>
                         </div>
-
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
                             <div class="ms-3 relative">
                                 <!-- Teams Dropdown -->
