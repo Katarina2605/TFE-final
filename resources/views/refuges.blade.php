@@ -234,8 +234,11 @@
                 <p>Découvrez les refuges dédiés au bien-être des animaux dans le Brabant Wallon grâce à cette carte interactive. Ces sanctuaires offrent un refuge sûr pour une variété d'animaux, leur procurant soins, sécurité et amour.</p><br>
                 <p>Chaque point sur la carte représente un lieu où des bénévoles dévoués et des professionnels travaillent ensemble pour offrir une seconde chance à des animaux maltraités, abandonnés ou en difficulté. </p><br>
                 <p>Pour accéder à leurs informations ? Rien de plus simple, il vous suffira de cliquer sur les divers points sur la carte et vous accéderez à toutes les informations essentielles.</p><br>
-                <p>Ensemble, nous pouvons faire une différence pour nos amis à fourrure et à plumes.</p>
-            </article>
+                <p>Si vous voulez faire ajouter votre refuge, vous pouvez en faire la demande sans aucun problème.</p><br>
+                    <div class="flex justify-center">
+                        <a href="/formulaire-refuges" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">Faire rajouter son refuge</a>
+                    </div>
+                </article>
         </div>
         <!-- /Article main content -->
 
