@@ -18,6 +18,43 @@ Route::get('/', function () {
     ]);
 });
 
+
+// Appliquer le middleware 'auth' pour les routes de registration
+/*Route::middleware('auth')->group(function () {
+    Route::get('/register', function () {
+        return Inertia::render('Auth/Register'); // Utilisation d'Inertia pour rendre la vue d'inscription
+    })->name('register');
+
+    Route::post('/register', function () {
+        // Logique de traitement de l'inscription si nécessaire
+    });
+});*/
+
+Route::middleware('auth')->group(function () {
+    Route::get('/register', function () {
+        return Inertia::render('Auth/Register');
+    })->name('register');
+
+    Route::post('/register', function (\Illuminate\Http\Request $request) {
+        // Validation des données
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        // Création de l'utilisateur
+        \App\Models\User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => \Hash::make($request->password),
+        ]);
+
+        // Redirection après création de l'utilisateur
+        return redirect()->route('dashboard');
+    });
+});
+
 Route::get('/', function () {
     return view('welcome'); // Assurez-vous que 'welcome' correspond au nom de votre vue (welcome.vue)
 });
